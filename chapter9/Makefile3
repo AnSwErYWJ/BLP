@@ -1,0 +1,25 @@
+all:myapp
+CC = gcc
+INSTDIR = /home/answer/Desktop
+myapp: main.o 2.o 3.o
+	$(CC) -o myapp main.o 2.o 3.o
+main.o: main.c a.h
+	$(CC) -c main.c
+2.o: 2.c a.h b.h
+	$(CC) -c 2.c
+3.o: 3.c b.h c.h
+	$(CC) -c 3.c
+
+clean:
+	-rm main.o 2.o 3.o
+install: myapp
+	@if [ -d $(INSTDIR) ]; \
+	then \
+	cp myapp $(INSTDIR) && \
+	chmod a+x $(INSTDIR)/myapp && \
+	chmod og-w $(INSTDIR)/myapp && \
+	echo "Installed in $(INSTDIR)"; \
+	else \
+	echo "Sorry,$(INSTDIR) does not exist";false; \
+	fi
+
