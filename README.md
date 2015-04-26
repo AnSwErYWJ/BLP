@@ -1,2 +1,2 @@
 # BLP
-examples in the <Beginning Linux Programming>
+examples in the Beginning Linux Programming
