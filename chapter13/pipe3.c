@@ -30,8 +30,8 @@ int main()
         if(fork_result == 0)
         {
         sprintf(buffer,"%d",file_pipes[0]);
-        (void)execl("pipe4","pipe4",buffer,(char *)0);
         // data_processed = read(file_pipes[0],buffer,BUFSIZ);
+        (void)execl("pipe4","pipe4",buffer,(char *)0);
        // printf("Read %d bytes: %s\n",data_processed,buffer);
         exit(EXIT_SUCCESS);
         }
