@@ -1,3 +1,3 @@
 CC = gcc
 all:
-	$(CC) -o popen4 popen4.c
+	$(CC) -o pipe2 pipe2.c
