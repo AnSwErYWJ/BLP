@@ -1,3 +1,3 @@
 CC = gcc
 all:
-	$(CC) -o pipe3 pipe3.c
+	$(CC) -o fifo2 fifo2.c
